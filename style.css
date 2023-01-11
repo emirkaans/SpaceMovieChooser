@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: url("https://www.hdwallpaper.nu/wp-content/uploads/2020/05/2001_a_space_odyssey-5.jpg")
+    no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.section {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin: 95px;
+}
+
+.parent-btn {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.btn--1 {
+  border-radius: 40px;
+  height: 50px;
+  width: 210px;
+  transition: 0.3s ease background-color;
+  transition-property: background-color, color;
+}
+
+.btn--1:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.movie {
+  width: 500px;
+  height: 200px;
+  margin: 30px auto;
+  background-color: crimson;
+  border-radius: 30px;
+  opacity: 0.9;
+}
+
+.movie--name {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  padding: 67px 0;
+}
+
+.btn--2 {
+  border-radius: 40px;
+  height: 50px;
+  width: 210px;
+  transition: 0.3s ease background-color;
+  transition-property: background-color, color;
+}
+
+.btn--2:hover {
+  background-color: crimson;
+  color: white;
+}
