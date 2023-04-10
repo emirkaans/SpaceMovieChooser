@@ -81,7 +81,7 @@
 .movie--link {
   opacity: 0;
   display: flex;
-  color: white;
+  color: rgb(250, 253, 51);
   font-size: 1.5rem;
   text-decoration: none;
   /* margin: 1.5rem; */
