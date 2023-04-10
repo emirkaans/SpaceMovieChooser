@@ -23,7 +23,15 @@
   font-size: 40px;
   color: white;
   text-align: center;
-  margin: 95px;
+  margin-top: 5.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-name {
+  font-size: 40px;
+  color: crimson;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .parent-btn {
@@ -37,16 +45,25 @@
   width: 210px;
   transition: 0.3s ease background-color;
   transition-property: background-color, color;
+  margin-bottom: 1rem;
 }
 
 .btn--1:hover {
   background-color: crimson;
   color: white;
+  cursor: pointer;
+  box-shadow: 2px 4px 5px rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
 }
 
 .movie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 500px;
-  height: 200px;
+  height: 220px;
+  padding: 4px;
   margin: 30px auto;
   background-color: crimson;
   border-radius: 30px;
@@ -54,21 +71,23 @@
 }
 
 .movie--name {
-  font-size: 40px;
+  display: flex;
+  font-size: 2rem;
   color: white;
   text-align: center;
-  padding: 67px 0;
+  padding: 2px;
 }
 
-.btn--2 {
-  border-radius: 40px;
-  height: 50px;
-  width: 210px;
-  transition: 0.3s ease background-color;
-  transition-property: background-color, color;
-}
-
-.btn--2:hover {
-  background-color: crimson;
+.movie--link {
+  opacity: 0;
+  display: flex;
   color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  /* margin: 1.5rem; */
+}
+
+.movie--link.active {
+  opacity: 1;
+  margin: 1.5rem;
 }
