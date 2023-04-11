@@ -1,12 +1,23 @@
 "use strict";
 
+// Elements
 const chooseButton = document.querySelector(".btn--1");
 const movieName = document.querySelector(".movie--name");
 const imdb = document.querySelector(".movie--link");
 
-const chooseFunc = async function () {
+const renderMovie = (data) => {
+  movieName.textContent = `${data.title} (${data.release_date?.slice(0, 4)})
+  `;
+  imdb.href = data.imdb_id
+    ? `https://www.imdb.com/title/${data.imdb_id}`
+    : "https://www.imdb.com/";
+
+  imdb.classList.add("active");
+};
+
+const chooseMov = async function () {
+  // Randomness of ID
   const movieId = Math.trunc(Math.random() * 999999 + 1);
-  let movieText;
 
   try {
     const res = await fetch(
@@ -15,24 +26,17 @@ const chooseFunc = async function () {
 
     if (res.ok) {
       const data = await res.json();
-      console.log(data);
+
+      // Elimination of adult content
 
       if (data.adult) return;
 
-      movieText = `${data.title} (${data.release_date?.slice(0, 4)})
-      `;
-
-      const movieLink = data.imdb_id
-        ? `https://www.imdb.com/title/${data.imdb_id}`
-        : "https://www.imdb.com/";
-
-      movieName.textContent = movieText;
-      imdb.href = movieLink;
-      imdb.classList.add("active");
+      // Rendering
+      renderMovie(data);
     }
 
     if (!res.ok) {
-      movieName.textContent = "Signal loss! Please try again!";
+      movieName.textContent = "Signal loss!";
       imdb.classList.remove("active");
     }
   } catch (err) {
@@ -40,4 +44,4 @@ const chooseFunc = async function () {
   }
 };
 
-chooseButton.addEventListener("click", chooseFunc);
+chooseButton.addEventListener("click", chooseMov);
