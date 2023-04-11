@@ -29,7 +29,6 @@ const chooseMov = async function () {
       const data = await res.json();
 
       // Elimination of adult content
-
       if (data.adult) return;
 
       // Rendering
