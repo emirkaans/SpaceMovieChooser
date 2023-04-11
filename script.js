@@ -5,6 +5,7 @@ const chooseButton = document.querySelector(".btn--1");
 const movieName = document.querySelector(".movie--name");
 const imdb = document.querySelector(".movie--link");
 
+// Functions
 const renderMovie = (data) => {
   movieName.textContent = `${data.title} (${data.release_date?.slice(0, 4)})
   `;
